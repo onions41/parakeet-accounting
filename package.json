@@ -4,6 +4,7 @@
   "homepage": "https://onions41.github.io/parakeet-accounting",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.241.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
