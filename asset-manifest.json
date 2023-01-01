@@ -1,16 +1,10 @@
 {
   "files": {
-    "main.css": "https://parakeetaccounting.com/static/css/main.073c9b0a.css",
-    "main.js": "https://parakeetaccounting.com/static/js/main.9cb7ab49.js",
-    "static/js/787.d459530a.chunk.js": "https://parakeetaccounting.com/static/js/787.d459530a.chunk.js",
-    "static/media/logo.svg": "https://parakeetaccounting.com/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.js": "https://parakeetaccounting.com/static/js/main.373c03d9.js",
     "index.html": "https://parakeetaccounting.com/index.html",
-    "main.073c9b0a.css.map": "https://parakeetaccounting.com/static/css/main.073c9b0a.css.map",
-    "main.9cb7ab49.js.map": "https://parakeetaccounting.com/static/js/main.9cb7ab49.js.map",
-    "787.d459530a.chunk.js.map": "https://parakeetaccounting.com/static/js/787.d459530a.chunk.js.map"
+    "main.373c03d9.js.map": "https://parakeetaccounting.com/static/js/main.373c03d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.9cb7ab49.js"
+    "static/js/main.373c03d9.js"
   ]
 }
