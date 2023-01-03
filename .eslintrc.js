@@ -24,6 +24,8 @@ module.exports = {
     "no-unused-vars": 1,
     "react/prop-types": 0,
     "no-console": 1,
-    "multiline-ternary": 0
+    "multiline-ternary": 0,
+    "react/jsx-uses-react": 0,
+    "react/react-in-jsx-scope": 0
   }
 }
