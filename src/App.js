@@ -19,7 +19,7 @@ const SectionBox = styled(Box)(({ theme }) => ({
 export default function App() {
   return (
     <Container
-      maxWidth="xl"
+      maxWidth="xxl"
       sx={{
         px: 3,
         border: "1px black solid" // Guideline, remove later

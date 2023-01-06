@@ -9,8 +9,9 @@ const theme = createTheme({
   breakpoints: {
     values: {
       zero: 0,
-      lg: 1024, // This is the transition point between desktop and mobile screen widths
-      xl: 1280
+      lg: 1024, // Transition point between desktop and mobile screen widths
+      xl: 1280,
+      xxl: 1440 // Max width of the website
     }
   }
 })

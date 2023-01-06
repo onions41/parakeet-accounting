@@ -48,6 +48,7 @@ export default function MobileMenu() {
         aria-label="open mobile menu"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        size="large"
         sx={{
           color: palette.text.primary,
           position: "fixed",
@@ -55,7 +56,10 @@ export default function MobileMenu() {
           top: 25
         }}
       >
-        <MenuRoundedIcon />
+        <MenuRoundedIcon
+          fontSize="inherit"
+          sx={{ position: "relative", bottom: "4px" }}
+        />
       </IconButton>
       <Menu
         id="mobile-menu"
