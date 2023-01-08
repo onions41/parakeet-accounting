@@ -9,7 +9,7 @@ export default function Menu() {
   // Either mobile or desktop
   // Screen width >= lg is desktop, otherwise mobile
   // lg breakpoint is set at 1024 (check theme file)
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("lg"))
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("lg"), { noSsr: true })
 
   return isMobile ? <MobileMenu /> : <DesktopMenu />
 }
