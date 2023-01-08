@@ -5,6 +5,7 @@ import styled from "@mui/material/styles/styled"
 
 // Internal imports
 import Menu from "./menu/Menu"
+import Home from "./home/Home"
 
 // Prevents anchor links from colliding with the sticky DesktopMenu (> lg)
 const SectionBox = styled(Box)(({ theme }) => ({
@@ -20,13 +21,10 @@ export default function App() {
   return (
     <Container
       maxWidth="xxl"
-      sx={{
-        px: 3,
-        border: "1px black solid" // Guideline, remove later
-      }}
+      sx={{ padding: "0 25px" }}
     >
       <Menu />
-      <SectionBox id="qbo-advisor">Lets see what happes now</SectionBox>
+      <Home />
     </Container>
   )
 }
