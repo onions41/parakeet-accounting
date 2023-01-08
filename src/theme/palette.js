@@ -1,10 +1,11 @@
 const palette = {
   primary: {
-    main: "#31B1D8", // parakeet blue
+    main: "#00C3FF", // parakeet blue
     contrastText: "#FFFFFF"
   },
   text: {
-    primary: "#383A43" // parakeet gray
+    primary: "#292b30", // parakeet black
+    secondary: "#969b91" // lime gray
   }
 }
 
