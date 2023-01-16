@@ -91,7 +91,7 @@ export default function Home() {
           >
             Parakeet Accounting primarily works with Quickbooks and the wide
             range of enterprise systems that integrate with it, giving you the
-            ability to generate and share a comprehensive snapshot of your
+            ability to generate and present a comprehensive snapshot of your
             business data at any point in time.
           </Typography>
 
