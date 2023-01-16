@@ -27,5 +27,10 @@ module.exports = {
     "multiline-ternary": 0,
     "react/jsx-uses-react": 0,
     "react/react-in-jsx-scope": 0
+    // indent: [
+    //   "error",
+    //   2,
+    //   { offsetTernaryExpressions: false } // This rule appears to be broken https://github.com/eslint/eslint/issues/14058
+    // ]
   }
 }
