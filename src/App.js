@@ -6,25 +6,41 @@ import styled from "@mui/material/styles/styled"
 // Internal imports
 import Menu from "./menu/Menu"
 import Home from "./home/Home"
+import Services from "./services/Services"
+import QboAdvisor from "./qboAdvisor/QboAdvisor"
+import Footer from "./footer/Footer"
 
 // Prevents anchor links from colliding with the sticky DesktopMenu (> lg)
 const SectionBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("lg")]: {
     "&:target": {
-      marginTop: "-91px",
-      paddingTop: "91px" // height of the menu container
+      marginTop: "-80px",
+      paddingTop: "80px" // height of the menu container
     }
   }
 }))
 
 export default function App() {
   return (
-    <Container
-      maxWidth="xxl"
-      sx={{ padding: "0 25px" }}
-    >
-      <Menu />
-      <Home />
-    </Container>
+    <Box sx={{}}>
+      <Container
+        maxWidth="xxl"
+        sx={{ padding: "0 25px" }}
+      >
+        <Menu />
+        <SectionBox id="home">
+          <Home />
+        </SectionBox>
+        <SectionBox id="services">
+          <Services />
+        </SectionBox>
+        <SectionBox id="qbo-advisor">
+          <QboAdvisor />
+        </SectionBox>
+      </Container>
+      <SectionBox id="contact-us">
+        <Footer />
+      </SectionBox>
+    </Box>
   )
 }
