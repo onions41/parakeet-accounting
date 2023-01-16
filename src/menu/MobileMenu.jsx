@@ -1,5 +1,5 @@
 // Module imports
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Typography from "@mui/material/Typography"
 import Link from "@mui/material/Link"
 import Box from "@mui/system/Box"
@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import IconButton from "@mui/material/IconButton"
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
+import { scrollIntoView } from "seamless-scroll-polyfill"
 
 // Internal imports
 import links from "./links"
@@ -41,26 +42,31 @@ export default function MobileMenu() {
       <LogoLink palette={palette} />
 
       {/* Hamberger menu on the right */}
-      <IconButton
-        id="mobile-menu-button"
-        aria-controls={open ? "mobile menu" : undefined}
-        aria-haspopup="true"
-        aria-label="open mobile menu"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-        size="large"
+      <Box
         sx={{
-          color: palette.text.primary,
           position: "fixed",
-          right: 25,
-          top: 25
+          right: "25px",
+          borderRadius: "10px",
+          boxShadow: 2,
+          backgroundColor: palette.background.default,
+          zIndex: 1
         }}
       >
-        <MenuRoundedIcon
-          fontSize="inherit"
-          sx={{ position: "relative", bottom: "4px" }}
-        />
-      </IconButton>
+        <IconButton
+          id="mobile-menu-button"
+          aria-controls={open ? "mobile menu" : undefined}
+          aria-haspopup="true"
+          aria-label="open mobile menu"
+          aria-expanded={open ? "true" : undefined}
+          onClick={handleClick}
+          size="medium"
+          sx={{
+            color: palette.text.secondary
+          }}
+        >
+          <MenuRoundedIcon fontSize="inherit" />
+        </IconButton>
+      </Box>
       <Menu
         id="mobile-menu"
         anchorEl={anchorEl}
@@ -70,38 +76,17 @@ export default function MobileMenu() {
           "aria-labelledby": "mobile-menu-button"
         }}
       >
-        {links.map((link, index) =>
-          index === links.length - 1 ? (
-            // The last link which is colored
-            <Link
-              href={link.href}
-              underline="none"
-              color={palette.text.primary}
-              key={`mobile-link-${index}`}
-            >
-              <MenuItem>
-                <Typography
-                  fontFamily="'Alighty Nesia Bold', sans-serif"
-                  fontWeight={600}
-                  fontSize={18}
-                  component="h2"
-                >
-                  Contact us
-                </Typography>
-              </MenuItem>
-            </Link>
-          ) : (
-            // Regular links to the left of the colored link
-            <MobileMenuLink
-              key={`mobile-link-${index}`}
-              href={link.href}
-              handleClose={handleClose}
-              palette={palette}
-            >
-              {link.name}
-            </MobileMenuLink>
-          )
-        )}
+        {links.map((link, index) => (
+          // Regular links to the left of the colored link
+          <MobileMenuLink
+            key={`mobile-link-${index}`}
+            href={link.href}
+            handleClose={handleClose}
+            palette={palette}
+          >
+            {link.name}
+          </MobileMenuLink>
+        ))}
       </Menu>
     </Box>
   )
@@ -109,9 +94,20 @@ export default function MobileMenu() {
 
 // Regular menu links
 function MobileMenuLink({ href, handleClose, children, palette }) {
+  const [anchorEl, setAnchorEl] = useState(null)
+
+  useEffect(() => {
+    setAnchorEl(document.getElementById(href))
+  }, [href])
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    scrollIntoView(anchorEl, { behavior: "smooth", block: "start" })
+  }
+
   return (
     <Link
-      href={href}
+      onClick={handleClick}
       underline="none"
       color={palette.text.primary}
     >

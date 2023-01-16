@@ -1,10 +1,12 @@
 // Module imports
+import { useState, useEffect } from "react"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 import Link from "@mui/material/Link"
 import Button from "@mui/material/Button"
 import Box from "@mui/material/Box"
 import useTheme from "@mui/material/styles/useTheme"
+import { scrollIntoView, scrollTo } from "seamless-scroll-polyfill"
 
 // Internal imports
 import links from "./links"
@@ -38,25 +40,12 @@ export default function DesktopMenu() {
         {links.map((link, index) =>
           index === links.length - 1 ? (
             // The last link which is colored
-            <Button
+            <DesktopMenuBtn
               key={`desktop-link-${index}`}
               href={link.href}
-              variant="contained"
-              sx={{
-                px: 3,
-                py: 1
-              }}
             >
-              <Typography
-                fontFamily="'Alighty Nesia Bold', sans-serif"
-                fontWeight={600}
-                fontSize={18}
-                textTransform="none"
-                component="h2"
-              >
-                Contact us
-              </Typography>
-            </Button>
+              {link.name}
+            </DesktopMenuBtn>
           ) : (
             // Regular links to the left of the colored link
             <DesktopMenuLink
@@ -73,11 +62,29 @@ export default function DesktopMenu() {
   )
 }
 
-// The regular links to the right
+// The regular links to the left
 function DesktopMenuLink({ href, palette, children }) {
+  const [anchorEl, setAnchorEl] = useState(null)
+
+  useEffect(() => {
+    setAnchorEl(document.getElementById(href))
+  }, [href])
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    scrollTo(window, {
+      behavior: "smooth",
+      top:
+        anchorEl.getBoundingClientRect().top -
+        document.body.getBoundingClientRect().top -
+        80 // offset in px
+    })
+  }
+
   return (
     <Link
-      href={href}
+      onClick={handleClick}
+      href="" // Makes the cursor change to a hand on hover
       underline="hover"
       color={palette.text.primary}
     >
@@ -90,5 +97,40 @@ function DesktopMenuLink({ href, palette, children }) {
         {children}
       </Typography>
     </Link>
+  )
+}
+
+// The regular links to the right
+function DesktopMenuBtn({ href, children }) {
+  const [anchorEl, setAnchorEl] = useState(null)
+
+  useEffect(() => {
+    setAnchorEl(document.getElementById(href))
+  }, [href])
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    scrollIntoView(anchorEl, { behavior: "smooth", block: "start" })
+  }
+
+  return (
+    <Button
+      onClick={handleClick}
+      variant="contained"
+      sx={{
+        px: 3,
+        py: 1
+      }}
+    >
+      <Typography
+        fontFamily="'Alighty Nesia Bold', sans-serif"
+        fontWeight={600}
+        fontSize={18}
+        textTransform="none"
+        component="h2"
+      >
+        {children}
+      </Typography>
+    </Button>
   )
 }
