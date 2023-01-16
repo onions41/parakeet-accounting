@@ -16,7 +16,7 @@ export default function Home() {
         boxSizing: "content-box",
         width: lg ? "auto" : md ? "600px" : "auto",
         height: xl ? "545px" : lg ? "480px" : "auto",
-        paddingTop: "72px",
+        padding: "72px 0 90px",
         margin: "0 auto",
         display: "flex",
         flexDirection: lg ? "row" : "column",
