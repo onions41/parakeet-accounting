@@ -52,7 +52,12 @@ export default function Services() {
             palette={palette}
             widths={widths}
             title={"Tax Services"}
-            iconImage={<img src={`${process.env.PUBLIC_URL}/favicon.svg`} />}
+            iconImage={
+              <img
+                width="100%"
+                src={`${process.env.PUBLIC_URL}/favicon.svg`}
+              />
+            }
           >
             Using our expert knowledge of the Canadian tax system, we make sure
             you and your business are in good standing with CRA while also
@@ -84,7 +89,12 @@ export default function Services() {
             palette={palette}
             widths={widths}
             title={"Books Setup & Cleanup"}
-            iconImage={<img src={`${process.env.PUBLIC_URL}/favicon.svg`} />}
+            iconImage={
+              <img
+                width="100%"
+                src={`${process.env.PUBLIC_URL}/favicon.svg`}
+              />
+            }
           >
             {
               "Automate your bookkeeping! Your business systems may be able to integrate with bookkeeping software such as Quickbooks. We'll help you take advantage of technology to automate."
