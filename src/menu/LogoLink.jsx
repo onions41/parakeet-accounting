@@ -32,7 +32,7 @@ export default function LogoLink({ palette }) {
             component="h1"
             sx={{
               fontFamily: "'Axios Pro', sans-serif",
-              fontSize: 25,
+              fontSize: menuBp ? 25 : 20,
               fontWeight: 600,
               color: palette.text.primary
             }}
