@@ -6,7 +6,7 @@ import WorkspacesIcon from "@mui/icons-material/Workspaces"
 import IcecreamIcon from "@mui/icons-material/Icecream"
 
 export default function Bottom({ palette, widths }) {
-  const { lg } = widths
+  const { lg, menuBp } = widths
 
   return (
     <Stack
@@ -24,17 +24,17 @@ export default function Bottom({ palette, widths }) {
         spacing={2}
       >
         <img
-          width="40px"
-          height="40px"
+          width="50px"
+          height="50px"
           style={{ position: "relative", bottom: 4 }}
-          src={`${process.env.PUBLIC_URL}/favicon.svg`}
+          src="https://parakeetbucket.s3.us-west-2.amazonaws.com/bird-screen-logo-light.svg"
         />
         {/* Company Name */}
         <Typography
           component="h1"
           sx={{
             fontFamily: "'Axios Pro', sans-serif",
-            fontSize: 20,
+            fontSize: menuBp ? 21 : 17,
             fontWeight: 600
           }}
         >

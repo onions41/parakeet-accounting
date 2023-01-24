@@ -16,8 +16,9 @@ export default function Footer() {
   const xl = useMediaQuery(breakpoints.up("xl"), { noSsr: true })
   const lg = useMediaQuery(breakpoints.up("lg"), { noSsr: true })
   const md = useMediaQuery(breakpoints.up("md"), { noSsr: true })
+  const menuBp = useMediaQuery(breakpoints.up("menu"), { noSsr: true })
   const sm = useMediaQuery(breakpoints.up("sm"), { noSsr: true })
-  const widths = { xxl, xl, lg, md, sm }
+  const widths = { xxl, xl, lg, md, menuBp, sm }
 
   return (
     <Container
