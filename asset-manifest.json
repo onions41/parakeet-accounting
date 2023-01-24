@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://parakeetaccounting.com/static/js/main.aea54db7.js",
+    "main.js": "https://parakeetaccounting.com/static/js/main.ace1352c.js",
     "index.html": "https://parakeetaccounting.com/index.html",
-    "main.aea54db7.js.map": "https://parakeetaccounting.com/static/js/main.aea54db7.js.map"
+    "main.ace1352c.js.map": "https://parakeetaccounting.com/static/js/main.ace1352c.js.map"
   },
   "entrypoints": [
-    "static/js/main.aea54db7.js"
+    "static/js/main.ace1352c.js"
   ]
 }
