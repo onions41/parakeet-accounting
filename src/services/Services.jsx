@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 import useTheme from "@mui/material/styles/useTheme"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined"
 
 export default function Services() {
   const { palette, breakpoints } = useTheme()
@@ -55,7 +54,7 @@ export default function Services() {
             iconImage={
               <img
                 width="100%"
-                src={`${process.env.PUBLIC_URL}/favicon.svg`}
+                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/tax-icon.svg"
               />
             }
           >
@@ -67,7 +66,12 @@ export default function Services() {
             palette={palette}
             widths={widths}
             title={"Financial Statements"}
-            iconImage={<ArticleOutlinedIcon sx={{ fontSize: "43px" }} />}
+            iconImage={
+              <img
+                width="100%"
+                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/financial-statement-icon.svg"
+              />
+            }
           >
             Are you raising capital, applying for a loan, or selling a business?
             We provide the accurate financial statements you need to demonstrate
@@ -79,7 +83,12 @@ export default function Services() {
             palette={palette}
             widths={widths}
             title={"Business Consulting"}
-            iconImage={<ArticleOutlinedIcon sx={{ fontSize: "43px" }} />}
+            iconImage={
+              <img
+                width="100%"
+                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/consulting-icon.svg"
+              />
+            }
           >
             Some business activities are financially complex to execute, e.g.
             acquiring another company or selling equity. Let the experts at
@@ -92,7 +101,7 @@ export default function Services() {
             iconImage={
               <img
                 width="100%"
-                src={`${process.env.PUBLIC_URL}/favicon.svg`}
+                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/bookkeeping-cleanup-icon.svg"
               />
             }
           >
@@ -157,12 +166,12 @@ function Card({ palette, widths, title, iconImage, children }) {
         {/* Circle border */}
         <Box
           sx={{
-            width: "50px",
-            height: "50px",
+            width: "60px",
+            height: "60px",
             padding: "15px",
-            marginBottom: "15px",
-            border: `2px ${palette.secondary.light} solid`,
-            borderRadius: "100%",
+            // marginBottom: "10px",
+            // border: `2px ${palette.secondary.light} solid`,
+            // borderRadius: "100%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center"
