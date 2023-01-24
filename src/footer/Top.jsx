@@ -29,7 +29,7 @@ export default function Top({ palette, widths }) {
           lineHeight="1"
         >
           {"Contact "}
-          <span style={{ color: palette.primary.main }}>Us</span>
+          <span style={{ color: palette.secondary.light }}>Us</span>
         </Typography>
         {/* "Parakeet Accounting is..." */}
         <Typography

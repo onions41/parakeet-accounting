@@ -34,7 +34,7 @@ export default function Bottom({ palette, widths }) {
           component="h1"
           sx={{
             fontFamily: "'Axios Pro', sans-serif",
-            fontSize: menuBp ? 21 : 17,
+            fontSize: menuBp ? 22 : 18,
             fontWeight: 600
           }}
         >
