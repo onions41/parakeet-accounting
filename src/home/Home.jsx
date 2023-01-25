@@ -76,7 +76,7 @@ export default function Home() {
             textAlign={lg ? "left" : "center"}
             fontSize={xl ? "1.13rem" : "1rem"}
           >
-            We also speak 中文
+            We also provide service in 中文
           </Typography>
         </Stack>
 
@@ -127,13 +127,13 @@ export default function Home() {
           height: lg ? "100%" : "auto",
           paddingTop: lg ? "0" : "72px",
           display: "flex",
-          alignItems: "center"
+          alignItems: "end"
         }}
       >
         {/* Home image. Should be 3:2 or wider. */}
-        <Box sx={{ flexGrow: "1" }}>
-          <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/two_birds.svg" />
-        </Box>
+        <Stack sx={{ flexGrow: "1", alignItems: "center" }}>
+          <img width="80%" src="https://parakeetbucket.s3.us-west-2.amazonaws.com/hero-image-2.png" />
+        </Stack>
       </Box>
     </Box>
   )
