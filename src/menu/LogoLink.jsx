@@ -34,9 +34,7 @@ export default function LogoLink({ palette }) {
               fontFamily: "'Axios Pro', sans-serif",
               fontSize: menuBp ? 26 : 22,
               fontWeight: 600,
-              color: palette.text.primary,
-              transition: "0.5s",
-              "&:hover": { color: palette.secondary.main }
+              color: palette.grey["800"]
             }}
           >
             Parakeet Accounting
