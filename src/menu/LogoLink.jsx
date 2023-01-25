@@ -22,19 +22,21 @@ export default function LogoLink({ palette }) {
         >
           {/* Logo */}
           <img
-            width="40px"
-            height="40px"
+            width="52px"
+            height="52px"
             style={{ position: "relative", bottom: 4 }}
-            src={`${process.env.PUBLIC_URL}/favicon.svg`}
+            src="https://parakeetbucket.s3.us-west-2.amazonaws.com/round-bird-logo.svg"
           />
           {/* Company Name */}
           <Typography
             component="h1"
             sx={{
               fontFamily: "'Axios Pro', sans-serif",
-              fontSize: menuBp ? 25 : 20,
+              fontSize: menuBp ? 26 : 22,
               fontWeight: 600,
-              color: palette.text.primary
+              color: palette.text.primary,
+              transition: "0.5s",
+              "&:hover": { color: palette.secondary.main }
             }}
           >
             Parakeet Accounting
