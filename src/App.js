@@ -14,8 +14,8 @@ import Footer from "./footer/Footer"
 const SectionBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("lg")]: {
     "&:target": {
-      marginTop: "-80px",
-      paddingTop: "80px" // height of the menu container
+      marginTop: "-90px",
+      paddingTop: "90px" // height of the menu container
     }
   }
 }))

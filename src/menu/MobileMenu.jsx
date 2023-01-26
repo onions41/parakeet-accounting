@@ -30,7 +30,7 @@ export default function MobileMenu() {
   return (
     <Box
       sx={{
-        height: "91px",
+        height: "120px",
         padding: "24px 0",
         backgroundColor: palette.background.default,
         display: "flex",

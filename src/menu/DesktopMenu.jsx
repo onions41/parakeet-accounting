@@ -20,7 +20,7 @@ export default function DesktopMenu() {
       sx={{
         position: "sticky",
         top: "0",
-        height: "91px",
+        height: "120px",
         padding: "24px 0",
         backgroundColor: palette.background.default,
         display: "flex",
