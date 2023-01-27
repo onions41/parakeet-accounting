@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography"
 import GradeIcon from "@mui/icons-material/Grade"
 import WorkspacesIcon from "@mui/icons-material/Workspaces"
 import IcecreamIcon from "@mui/icons-material/Icecream"
+import { fontSize } from "@mui/system"
 
 export default function Bottom({ palette, widths }) {
   const { lg, menuBp } = widths
@@ -11,7 +12,7 @@ export default function Bottom({ palette, widths }) {
   return (
     <Stack
       direction={lg ? "row" : "column"}
-      spacing={lg ? 0 : 4}
+      spacing={lg ? 2 : 4}
       sx={{
         justifyContent: "space-between",
         alignItems: "center"
@@ -44,11 +45,14 @@ export default function Bottom({ palette, widths }) {
       {/* Middle column */}
       <Typography
         sx={{
-          textAlign: "center"
+          textAlign: lg ? "left" : "center",
+          fontSize: "0.9rem"
         }}
       >
         {`© ${new Date().getFullYear()} `}
-        Parakeet Accounting Ltd. All Rights Reserved.
+        Parakeet Accounting Ltd. All Rights Reserved. <br /> QuickBooks is a
+        registered trademark and/or registered service mark of Intuit Inc., used
+        with permission
       </Typography>
       {/* Right column */}
       <Stack

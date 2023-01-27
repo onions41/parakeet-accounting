@@ -62,7 +62,9 @@ export default function Home() {
             fontSize={md ? "1.2rem" : "1.1rem"}
             fontWeight={700}
           >
-            <span style={{ color: palette.secondary.main }}>Quickbooks</span>
+            <span style={{ color: palette.secondary.main }}>
+              QuickBooks<sup style={{ fontSize: "0.5rem" }}>TM</sup>
+            </span>
             {" Solution Provider"}
           </Typography>
           {/* Headline */}
@@ -89,17 +91,18 @@ export default function Home() {
             textAlign={lg ? "left" : "center"}
             fontSize={md ? "1.1rem" : "1rem"}
           >
-            Parakeet Accounting primarily works with Quickbooks and the wide
-            range of enterprise systems that integrate with it, giving you the
-            ability to generate and present a comprehensive snapshot of your
-            business data at any point in time.
+            Parakeet Accounting primarily works with QuickBooks
+            <sup style={{ fontSize: "0.5rem" }}>TM</sup> and the wide range of
+            enterprise systems that integrate with it, giving you the ability to
+            generate and present a comprehensive snapshot of your business data
+            at any point in time.
           </Typography>
 
           {/* Quickbooks logo */}
           <Box
             sx={{
               boxSizing: "content-box",
-              width: xl ? "200px" : lg ? "180px" : "160px",
+              width: xl ? "220px" : lg ? "200px" : "160px",
               padding: "8px 0px 16px"
             }}
           >
@@ -108,7 +111,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/quickbooks-logo.svg" />
+              <img width="100%" src="https://parakeetbucket.s3.us-west-2.amazonaws.com/qb-logo-horizontal-preferred.svg" />
             </a>
           </Box>
         </Stack>

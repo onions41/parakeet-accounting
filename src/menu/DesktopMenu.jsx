@@ -35,28 +35,33 @@ export default function DesktopMenu() {
       <Stack
         direction="row"
         alignItems="center"
-        spacing={5}
+        spacing={6}
       >
-        {links.map((link, index) =>
-          index === links.length - 1 ? (
-            // The last link which is colored
-            <DesktopMenuBtn
-              key={`desktop-link-${index}`}
-              href={link.href}
-            >
-              {link.name}
-            </DesktopMenuBtn>
-          ) : (
-            // Regular links to the left of the colored link
-            <DesktopMenuLink
-              key={`desktop-link-${index}`}
-              href={link.href}
-              palette={palette}
-            >
-              {link.name}
-            </DesktopMenuLink>
-          )
-        )}
+        <DesktopMenuLink
+          href={links[0].href}
+          palette={palette}
+        >
+          <Box width={75}>{links[0].name}</Box>
+        </DesktopMenuLink>
+        <DesktopMenuLink
+          href={links[1].href}
+          palette={palette}
+        >
+          {links[1].name}
+        </DesktopMenuLink>
+
+        {/* QuickBooks Advisor Link */}
+        <DesktopMenuLink
+          href={links[2].href}
+          palette={palette}
+        >
+          <Box sx={{ fontSize: 16, lineHeight: 1.1 }}>
+            QuickBooks<sup style={{ fontSize: 8 }}>TM</sup><br />Advisor
+          </Box>
+        </DesktopMenuLink>
+
+        {/* Contact Us Button */}
+        <DesktopMenuBtn href={links[3].href}>{links[3].name}</DesktopMenuBtn>
       </Stack>
     </Box>
   )
@@ -92,6 +97,7 @@ function DesktopMenuLink({ href, palette, children }) {
         fontFamily="'Alighty Nesia Bold', sans-serif"
         fontWeight={600}
         fontSize={18}
+        textAlign="center"
         component="h2"
       >
         {children}

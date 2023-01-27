@@ -76,17 +76,40 @@ export default function MobileMenu() {
           "aria-labelledby": "mobile-menu-button"
         }}
       >
-        {links.map((link, index) => (
-          // Regular links to the left of the colored link
-          <MobileMenuLink
-            key={`mobile-link-${index}`}
-            href={link.href}
-            handleClose={handleClose}
-            palette={palette}
-          >
-            {link.name}
-          </MobileMenuLink>
-        ))}
+        <MobileMenuLink
+          href={links[0].href}
+          handleClose={handleClose}
+          palette={palette}
+        >
+          {links[0].name}
+        </MobileMenuLink>
+        <MobileMenuLink
+          href={links[1].href}
+          handleClose={handleClose}
+          palette={palette}
+        >
+          {links[1].name}
+        </MobileMenuLink>
+
+        {/* QuickBooks Advisor Link */}
+        <MobileMenuLink
+          href={links[2].href}
+          handleClose={handleClose}
+          palette={palette}
+        >
+          <Box sx={{ fontSize: 16, lineHeight: 1.1 }}>
+            QuickBooks<sup style={{ fontSize: 8 }}>TM</sup><br />Advisor
+          </Box>
+        </MobileMenuLink>
+
+        {/* Contact Us Link */}
+        <MobileMenuLink
+          href={links[3].href}
+          handleClose={handleClose}
+          palette={palette}
+        >
+          {links[3].name}
+        </MobileMenuLink>
       </Menu>
     </Box>
   )
@@ -115,7 +138,7 @@ function MobileMenuLink({ href, handleClose, children, palette }) {
         <Typography
           fontFamily="'Alighty Nesia Bold', sans-serif"
           fontWeight={600}
-          fontSize={18}
+          fontSize={20}
           component="h2"
         >
           {children}

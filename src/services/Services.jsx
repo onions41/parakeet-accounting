@@ -105,9 +105,10 @@ export default function Services() {
               />
             }
           >
-            {
-              "Automate your bookkeeping! Your business systems may be able to integrate with bookkeeping software such as Quickbooks. We'll help you take advantage of technology to automate."
-            }
+            Automate your bookkeeping! Your business systems may be able to
+            integrate with bookkeeping software such as QuickBooks
+            <sup style={{ fontSize: "0.5rem" }}>TM</sup>. We&apos;ll help you
+            take advantage of technology to automate.
           </Card>
         </Inner>
       </Outer>
