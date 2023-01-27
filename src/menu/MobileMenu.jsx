@@ -138,7 +138,7 @@ function MobileMenuLink({ href, handleClose, children, palette }) {
         <Typography
           fontFamily="'Alighty Nesia Bold', sans-serif"
           fontWeight={600}
-          fontSize={20}
+          fontSize={18}
           component="h2"
         >
           {children}

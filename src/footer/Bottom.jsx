@@ -1,10 +1,9 @@
 import Box from "@mui/material/Box"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
-import GradeIcon from "@mui/icons-material/Grade"
-import WorkspacesIcon from "@mui/icons-material/Workspaces"
-import IcecreamIcon from "@mui/icons-material/Icecream"
-import { fontSize } from "@mui/system"
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch"
+import DarkModeIcon from "@mui/icons-material/DarkMode"
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt"
 
 export default function Bottom({ palette, widths }) {
   const { lg, menuBp } = widths
@@ -50,9 +49,9 @@ export default function Bottom({ palette, widths }) {
         }}
       >
         {`© ${new Date().getFullYear()} `}
-        Parakeet Accounting Ltd. All Rights Reserved. <br /> QuickBooks is a
-        registered trademark and/or registered service mark of Intuit Inc., used
-        with permission
+        Parakeet Accounting Ltd. All Rights Reserved. <br /> QuickBooks
+        <sup style={{ fontSize: "0.5rem" }}>TM</sup> is a registered trademark
+        and/or registered service mark of Intuit Inc., used with permission
       </Typography>
       {/* Right column */}
       <Stack
@@ -60,13 +59,13 @@ export default function Bottom({ palette, widths }) {
         spacing={2}
       >
         <CircleLinks palette={palette}>
-          <GradeIcon fontSize="small" />
+          <SignalCellularAltIcon fontSize="small" />
         </CircleLinks>
         <CircleLinks palette={palette}>
-          <WorkspacesIcon fontSize="small" />
+          <RocketLaunchIcon fontSize="small" />
         </CircleLinks>
         <CircleLinks palette={palette}>
-          <IcecreamIcon fontSize="small" />
+          <DarkModeIcon fontSize="small" />
         </CircleLinks>
       </Stack>
     </Stack>
