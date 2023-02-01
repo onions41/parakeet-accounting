@@ -94,11 +94,11 @@ function DesktopMenuLink({ href, palette, children }) {
       color={palette.text.primary}
     >
       <Typography
-        fontFamily="'Alighty Nesia Bold', sans-serif"
         fontWeight={600}
         fontSize={18}
         textAlign="center"
         component="h2"
+        sx={{ color: palette.grey["700"] }}
       >
         {children}
       </Typography>
@@ -129,7 +129,6 @@ function DesktopMenuBtn({ href, children }) {
       }}
     >
       <Typography
-        fontFamily="'Alighty Nesia Bold', sans-serif"
         fontWeight={600}
         fontSize={18}
         textTransform="none"

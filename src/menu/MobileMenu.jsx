@@ -136,10 +136,10 @@ function MobileMenuLink({ href, handleClose, children, palette }) {
     >
       <MenuItem onClick={handleClose}>
         <Typography
-          fontFamily="'Alighty Nesia Bold', sans-serif"
           fontWeight={600}
           fontSize={18}
           component="h2"
+          sx={{ color: palette.grey["700"] }}
         >
           {children}
         </Typography>

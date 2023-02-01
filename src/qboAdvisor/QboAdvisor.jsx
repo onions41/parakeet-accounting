@@ -155,8 +155,8 @@ function CallToActionLink({ widths, href, palette, children }) {
       underline="always"
       color={palette.text.primary}
       sx={{
-        fontFamily: "'Alighty Nesia Bold', sans-serif",
-        fontSize: xl ? "1.40rem" : "1.25rem"
+        fontSize: xl ? "1.40rem" : "1.25rem",
+        color: palette.grey["700"]
       }}
     >
       {children}

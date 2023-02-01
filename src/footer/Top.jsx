@@ -57,7 +57,7 @@ export default function Top({ palette, widths }) {
           sx={{ alignItems: "center" }}
         >
           <EmailIcon />
-          <ContactText widths={widths}>boyan.dong@outlook.com</ContactText>
+          <ContactText widths={widths}>boyan@parakeetaccounting.com</ContactText>
         </Stack>
         <Stack
           spacing={1}
@@ -105,7 +105,6 @@ function ContactText({ widths, children }) {
 
   return (
     <Typography
-      fontFamily="'Alighty Nesia Bold', sans-serif"
       fontWeight={700}
       fontSize={sm ? "1.1rem" : "1rem"}
     >
