@@ -70,7 +70,7 @@ export default function Home() {
               width: xl ? "180px" : lg ? "160px" : "150px"
             }}
           >
-            <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/cpa-logo.svg" />
+            <img src={process.env.PUBLIC_URL + "/assets/cpa-logo.svg"} />
           </Box>
           <Typography
             textAlign={lg ? "left" : "center"}
@@ -105,16 +105,16 @@ export default function Home() {
             }}
           >
             <Box sx={{ flexBasis: "23%", flexShrink: "1" }}>
-              <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/mando-kids-logo.svg" />
+              <img src={process.env.PUBLIC_URL + "/assets/mando-kids-logo.svg"} />
             </Box>
             <Box sx={{ flexBasis: "36%", flexShrink: "1" }}>
-              <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/bio-international-logo.svg" />
+              <img src={process.env.PUBLIC_URL + "/assets/bio-international-logo.svg"} />
             </Box>
             <Box sx={{ flexBasis: "20%", flexShrink: "1" }}>
-              <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/mall-ads-logo.svg" />
+              <img src={process.env.PUBLIC_URL + "/assets/mall-ads-logo.svg"} />
             </Box>
             <Box sx={{ flexBasis: "21%", flexShrink: "1" }}>
-              <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/yum-ice-logo.svg" />
+              <img src={process.env.PUBLIC_URL + "/assets/yum-ice-logo.svg"} />
             </Box>
           </Stack>
         </Stack>
@@ -132,7 +132,7 @@ export default function Home() {
       >
         {/* Home image. Should be 3:2 or wider. */}
         <Stack sx={{ flexGrow: "1", alignItems: "center" }}>
-          <img width="80%" src="https://parakeetbucket.s3.us-west-2.amazonaws.com/hero-image-2.png" />
+          <img width="80%" src={process.env.PUBLIC_URL + "/assets/hero-image-2.png"} />
         </Stack>
       </Box>
     </Box>

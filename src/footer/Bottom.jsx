@@ -27,7 +27,7 @@ export default function Bottom({ palette, widths }) {
           width="50px"
           height="50px"
           style={{ position: "relative", bottom: 4 }}
-          src="https://parakeetbucket.s3.us-west-2.amazonaws.com/footer-logo-1.svg"
+          src={process.env.PUBLIC_URL + "/assets/footer-logo-1.svg"}
         />
         {/* Company Name */}
         <Typography

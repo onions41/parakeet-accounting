@@ -80,7 +80,7 @@ export default function Top({ palette, widths }) {
       >
         {/* Wechat logo */}
         <Box width="25px">
-          <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/wechat-logo.svg" />
+          <img src={process.env.PUBLIC_URL + "/assets/wechat-logo.svg"} />
         </Box>
         {/* Wechat QR Code */}
         <Box
@@ -92,7 +92,7 @@ export default function Top({ palette, widths }) {
             backgroundColor: palette.grey["400"]
           }}
         >
-          <img src="https://parakeetbucket.s3.us-west-2.amazonaws.com/wechat-id-2.svg" />
+          <img src={process.env.PUBLIC_URL + "/assets/wechat-id-2.svg"} />
         </Box>
       </Stack>
     </Stack>

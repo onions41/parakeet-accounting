@@ -54,7 +54,7 @@ export default function Services() {
             iconImage={
               <img
                 width="100%"
-                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/tax-icon.svg"
+                src={process.env.PUBLIC_URL + "/assets/tax-icon.svg"}
               />
             }
           >
@@ -69,7 +69,7 @@ export default function Services() {
             iconImage={
               <img
                 width="100%"
-                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/financial-statement-icon.svg"
+                src={process.env.PUBLIC_URL + "/assets/financial-statement-icon.svg"}
               />
             }
           >
@@ -86,7 +86,7 @@ export default function Services() {
             iconImage={
               <img
                 width="100%"
-                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/consulting-icon.svg"
+                src={process.env.PUBLIC_URL + "/assets/consulting-icon.svg"}
               />
             }
           >
@@ -101,7 +101,7 @@ export default function Services() {
             iconImage={
               <img
                 width="100%"
-                src="https://parakeetbucket.s3.us-west-2.amazonaws.com/bookkeeping-cleanup-icon.svg"
+                src={process.env.PUBLIC_URL + "/assets/bookkeeping-cleanup-icon.svg"}
               />
             }
           >

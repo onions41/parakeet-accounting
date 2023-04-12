@@ -24,7 +24,7 @@ export default function LogoLink({ palette }) {
           <img
             width="110px"
             style={{ position: "relative", bottom: 4 }}
-            src="https://parakeetbucket.s3.us-west-2.amazonaws.com/round-bird-smarter.svg"
+            src={process.env.PUBLIC_URL + "/assets/round-bird-smarter.svg"}
           />
           {/* Company Name */}
           <Typography

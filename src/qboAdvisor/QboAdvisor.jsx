@@ -34,7 +34,7 @@ export default function Home() {
           width: lg ? "38%" : "80%",
           height: lg ? "100%" : md ? "380px" : sm ? "320px" : "240px",
           backgroundImage:
-            "url('https://parakeetbucket.s3.us-west-2.amazonaws.com/business-stock-1.jpg')",
+            `url(${process.env.PUBLIC_URL}/assets/business-stock-1.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
@@ -111,7 +111,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img width="100%" src="https://parakeetbucket.s3.us-west-2.amazonaws.com/qb-logo-horizontal-preferred.svg" />
+              <img width="100%" src={process.env.PUBLIC_URL + "/assets/qb-logo-horizontal-preferred.svg"} />
             </a>
           </Box>
         </Stack>
